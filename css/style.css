@@ -72,8 +72,9 @@ p a:hover{
 }
 /* adaptive layout for picture and creates a flexbox so that the pictues can wrap when resized */
 #content{
+    cursor: pointer;
     min-width: 400px;
-    min-height: 400px;
+    height: 400px;
     flex-wrap: wrap;
     display: flex;
     justify-content: space-around
