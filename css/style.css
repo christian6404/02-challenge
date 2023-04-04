@@ -1,0 +1,67 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* set any reused code into variables */
+:root {
+    --dar: #130b38;
+    --lig: #b0b0b0;
+    --li: #696969;
+}
+.main{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+/* uses combinator * to style all immediate children of <div class="main"> */
+.main > * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.header{
+    background-color: var(--li);
+    height: 180px;
+}
+.contact{
+    background-color: var(--lig);
+    height: 100px;
+}
+
+.myprojects{
+    text-align: left;
+    background-color: var(--lig);
+    height: 600px;
+    font-size: 24px;
+}
+
+.aboutme{
+    background-color: var(--lig);
+    height: 400px;
+}
+
+#pic{
+    display: flex;
+}
+
+aside img{
+    max-width: 245px;
+    max-height: 325px;
+}
+/* sets order of boxes within container */
+@media all and (min-width: 800px) {
+    .main{
+        flex: 3;
+    }
+    .myprojects{
+        order: 1;
+    }
+    .aboutme{
+        order: 2;
+    }
+    .contact{
+        order: 3;
+    }
+}
