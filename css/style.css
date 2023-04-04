@@ -23,7 +23,7 @@
 
 .header{
     background-color: var(--li);
-    height: 180px;
+    height: 100px;
 }
 header p{
     display: flex;
@@ -54,6 +54,7 @@ p a:hover{
     display: flex;
 }
 #content{
+    padding: 10px black;
     display: flex;
     justify-content: space-around
 }
