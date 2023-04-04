@@ -1,13 +1,17 @@
+/* sets default font across webpage */
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
+html{
+    background-color: black;
+}
 /* set any reused code into variables */
 :root {
     --dar: #130b38;
     --lig: #b0b0b0;
     --li: #696969;
 }
+/* creates my main flexbox */ 
 .main{
     display: flex;
     flex-flow: row wrap;
@@ -20,53 +24,73 @@
     flex: 1 100%;
     border-radius: 10px;
 }
-
+/* sets height of header box and backround color */
 .header{
     background-color: var(--li);
     height: 100px;
 }
+/* creates a flexbox for my navigation bar and spaces my nav links across the header */
 header p{
     display: flex;
     justify-content: space-between;
 }
+/* when hoving over a  link on the nav bar will change the color of the text and the cursor to a pointer*/
 p a:hover{
     cursor: pointer;
     color: white;
 }
+/* sets backround color for the contact me section and sets the correct view height */
 .contact{
-    background-color: var(--lig);
+    background-color: var(--li);
     height: 100px;
 }
-
+/* creates a flexbox for the links on the contact me and spaces them evenly */
+.contact p{
+    display: flex;
+    justify-content:space-evenly;
+}
+/* when hovering over a link in the contact me section will change the font color and the cursor to a pointer */
+.contact p:hover{
+    color: white;
+    cursor: pointer;
+}
+/* sets the box for "My projects" to the correct height and  */
 .myprojects{
     text-align: left;
-    background-color: var(--lig);
+    background-color: var(--li);
     height: 480px;
     font-size: 24px;
 }
-
+/* sets backround color and height of the about me section to fit the content inside */
 .aboutme{
-    background-color: var(--lig);
+    background-color: var(--li);
     height: 400px;
 }
-
+/* stacks the picture and text in the about me section next to each other */
 #pic{
     display: flex;
 }
+/* adaptive layout for picture and creates a flexbox so that the pictues can wrap when resized */
 #content{
-    padding: 10px black;
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-around
 }
+/* sets main project to a bigger picture then the rest of the projects, rounds the edgs, and rotates them slighly*/
 #project1{
-    width: 350px;
-    height: 350px;
+    max-width: 350px;
+    max-height: 350px;
+    transform: rotate(-5deg);
+    border-radius: 25px;
 }
+/* sets the rest of the pictures to the same resoloution, rounds the edges, and rotates them slightly */
 #project2{
     width: 150px;
     height: 150px;
-
+    transform: rotate(-5deg);
+    border-radius: 25px;
 }
+/* sets the resoloution of my picture to fit into the aboutme section */
 aside img{
     max-width: 245px;
     max-height: 325px;
