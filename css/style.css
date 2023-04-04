@@ -22,7 +22,6 @@ html{
     padding: 10px;
     margin: 10px;
     flex: 1 100%;
-    border-radius: 10px;
 }
 /* sets height of header box and backround color */
 .header{
@@ -58,8 +57,9 @@ p a:hover{
 .myprojects{
     text-align: left;
     background-color: var(--li);
-    height: 480px;
+    height: 490px;
     font-size: 24px;
+    border-radius: 10px;
 }
 /* sets backround color and height of the about me section to fit the content inside */
 .aboutme{
@@ -72,6 +72,8 @@ p a:hover{
 }
 /* adaptive layout for picture and creates a flexbox so that the pictues can wrap when resized */
 #content{
+    min-width: 400px;
+    min-height: 400px;
     flex-wrap: wrap;
     display: flex;
     justify-content: space-around
@@ -82,6 +84,8 @@ p a:hover{
     max-height: 350px;
     transform: rotate(-5deg);
     border-radius: 25px;
+    border-style: ridge;
+    border-color: var(--dar)
 }
 /* sets the rest of the pictures to the same resoloution, rounds the edges, and rotates them slightly */
 #project2{
@@ -89,6 +93,8 @@ p a:hover{
     height: 150px;
     transform: rotate(-5deg);
     border-radius: 25px;
+    border-style: ridge;
+    border-color: var(--dar)
 }
 /* sets the resoloution of my picture to fit into the aboutme section */
 aside img{
